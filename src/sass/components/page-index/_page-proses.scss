@@ -1,0 +1,292 @@
+.proses {
+   @include positioning;
+
+   &::before {
+      content: '';
+      display: block;
+
+      width: 100vw;
+      height: 40px;
+      @include positioning(absolute);
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateY(39px);
+      clip-path: polygon(50% 55%, 0 0, 100% 0);
+
+      background: getColor('white-text');
+
+      @media screen and (min-width: $tablet) {
+         height: 60px;
+
+         transform: translateY(59px);
+      }
+   }
+
+   &__container--line {
+      @include positioning;
+      @media screen and (max-width: 767px) {
+         padding-left: 70px;
+      }
+
+      &::after {
+         content: '';
+         @include positioning(absolute);
+         top: 160px;
+         left: 30px;
+         width: 2px;
+         height: 75%;
+         background: getColor('primary-color');
+
+         @media screen and (min-width: $tablet) {
+            top: 220px;
+            left: 50%;
+            height: 72%;
+            transform: translateX(-50%);
+         }
+      }
+   }
+
+   &__title {
+      @extend %title-text;
+      color: getColor('primary-color');
+      margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 38px;
+         margin-bottom: 60px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 42px;
+      }
+   }
+
+   &__list {
+      @extend %padding-list;
+   }
+
+   @media screen and (min-width: $tablet) {
+      &__item {
+         @media screen and (min-width: $tablet) {
+            @include positioning;
+         }
+
+         &:nth-child(2n) {
+            display: flex;
+            justify-content: end;
+         }
+      }
+   }
+
+   @media screen and (min-width: $tablet) {
+      &__box-positioning {
+         width: 50%;
+         padding-left: 30px;
+         padding-right: 30px;
+
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         @media screen and (min-width: $desktop) {
+            padding-left: 50px;
+            padding-right: 50px;
+         }
+      }
+   }
+
+   &__img {
+      height: 80px;
+      margin-bottom: 20px;
+   }
+
+   &__name {
+      @media screen and (max-width: 767px) {
+         @include positioning;
+      }
+
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.35;
+      color: getColor('primary-color');
+      margin-bottom: 10px;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 20px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 22px;
+      }
+   }
+
+   &__description {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.45;
+      color: getColor('primary-color');
+      padding-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 14px;
+         text-align: center;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 15px;
+      }
+   }
+
+   // ----- псевдо метки с номерами
+   &__discussion {
+      @include positioning(absolute);
+      left: 15px;
+      top: 16%;
+      z-index: 1;
+      transform: translate(0, -50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         top: 48%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__task {
+      @include positioning(absolute);
+      left: 15px;
+      top: 36%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         top: 57%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__work {
+      @include positioning(absolute);
+      left: 15px;
+      top: 53%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         top: 48%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+      @media screen and (min-width: $desktop) {
+         top: 51%;
+      }
+   }
+
+   &__edits {
+      @include positioning(absolute);
+      left: 15px;
+      top: 73%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         top: 52%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+
+      @media screen and (min-width: $tablet) {
+         top: 56%;
+      }
+   }
+
+   &__resoult {
+      @include positioning(absolute);
+      left: 15px;
+      top: 91%;
+      z-index: 1;
+      transform: translateY(-50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+
+      font-size: 16px;
+      line-height: 1.35;
+
+      border: 2px solid getColor('white-text');
+      border-radius: 50%;
+
+      color: getColor('white-text');
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         top: 48%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+      }
+   }
+}

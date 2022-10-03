@@ -1,0 +1,23 @@
+.copyright {
+   background: getColor('global-bacground');
+   padding-bottom: 10px;
+   padding-top: 10px;
+
+   &__title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-size: 14px;
+      line-height: 1.25;
+      opacity: 0.65;
+
+      text-align: center;
+      color: getColor('dark-text');
+
+      transition: opacity $timing-function-cubic;
+      &:hover {
+         opacity: 1;
+      }
+   }
+}

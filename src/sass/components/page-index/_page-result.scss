@@ -1,0 +1,207 @@
+.result {
+   &::before {
+      content: '';
+      display: block;
+
+      width: 100vw;
+      height: 40px;
+      @include positioning(absolute);
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      transform: translateY(39px);
+      clip-path: polygon(50% 55%, 0 0, 100% 0);
+
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         height: 60px;
+
+         transform: translateY(59px);
+      }
+   }
+
+   @include positioning;
+   background-color: getColor('primary-color');
+
+   // ---- заголовок секции -----
+   &__title {
+      font-size: 32px;
+      line-height: 1.55;
+      font-weight: 700;
+      text-align: center;
+
+      color: getColor('white-text');
+
+      @media screen and (min-width: $tablet) {
+         font-size: 40px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         font-size: 48px;
+      }
+   }
+
+   // ------ коробка с пустым мсто для
+   // позиционирвоания
+   &__box-positioning {
+      height: 1000px;
+      width: 100%;
+   }
+
+   &__logo,
+   &__desing,
+   &__site,
+   &__promotion {
+      @include positioning(sticky);
+   }
+
+   // --- коробка для липкого позиционирвоания
+   // ---- ПОМЕНЯТЬ МЕСТАМИ!!! ------
+   &__logo {
+      top: 1000px;
+      z-index: 5;
+   }
+
+   // --- коробка для адсолютного позиционирвоания
+   &__box-logo {
+      @include positioning(absolute);
+      top: 0;
+      left: 0;
+
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__desing {
+      top: 750px;
+      z-index: 4;
+   }
+
+   &__box-desing {
+      @include positioning(absolute);
+      top: 150px;
+      left: 50px;
+
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__site {
+      top: 450px;
+      z-index: 3;
+   }
+
+   &__box-site {
+      @include positioning(absolute);
+      top: 300px;
+      left: 150px;
+
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__promotion {
+      top: 150px;
+      z-index: 2;
+   }
+
+   &__box-promotion {
+      @include positioning(absolute);
+      top: 400px;
+      left: 200px;
+
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
+
+   &__block-title {
+      font-size: 16px;
+      line-height: 1.55;
+
+      color: getColor('white-text');
+      margin-bottom: $card-set-gap;
+
+      @media screen and (min-width: $tablet) {
+         font-size: 18px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         font-size: 20px;
+      }
+   }
+
+   &__picture {
+      width: 95px;
+
+      @media screen and (min-width: $tablet) {
+         width: 120px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         width: 200px;
+      }
+   }
+
+   // ---- картинка с результатом ----
+   &__box-finished {
+      @include positioning;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+
+      &::before {
+         content: '';
+         @include positioning(absolute);
+         bottom: -80px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 480px;
+         height: 1px;
+         background: linear-gradient(
+            90deg,
+            rgba(58, 91, 102, 1) 0%,
+            rgba(255, 153, 51, 1) 15%,
+            rgba(255, 153, 51, 1) 83%,
+            rgba(58, 91, 102, 1) 100%
+         );
+         @media screen and (min-width: 768px) {
+            width: 768px;
+         }
+         @media screen and (min-width: 1200px) {
+            width: 1200px;
+         }
+      }
+   }
+
+   &__picture-finished {
+      width: 958px;
+      text-align: center;
+      margin-bottom: $card-set-gap;
+   }
+
+   &__name {
+      font-size: 32px;
+      line-height: 1.55;
+      font-weight: 700;
+      color: getColor('white-text');
+
+      @media screen and (min-width: $tablet) {
+         font-size: 40px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         font-size: 48px;
+      }
+   }
+}

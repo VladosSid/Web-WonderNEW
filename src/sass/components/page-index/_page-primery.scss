@@ -1,0 +1,412 @@
+.primery {
+   @include positioning;
+   background-color: getColor('primary-color');
+
+   &::before {
+      content: '';
+      display: block;
+
+      width: 100vw;
+      height: 40px;
+      @include positioning(absolute);
+      bottom: 0;
+      left: 0;
+      transform: translateY(39px);
+      clip-path: polygon(50% 55%, 0 0, 100% 0);
+
+      background: getColor('primary-color');
+
+      @media screen and (min-width: $tablet) {
+         height: 60px;
+
+         transform: translateY(59px);
+      }
+   }
+
+   &__position-img {
+      @include positioning;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      padding-top: 200px;
+      @media screen and (max-width: 767px) {
+         padding-bottom: 200px;
+      }
+
+      @media screen and (min-width: $tablet) {
+         padding-top: 150px;
+      }
+   }
+
+   // ---------- bg-image-top -------
+   &__eyedropper {
+      @include positioning(absolute);
+      top: 70px;
+      left: 23px;
+      rotate: 23deg;
+
+      width: 20px;
+      height: 20px;
+
+      @media screen and (min-width: $tablet) {
+         width: 30px;
+         height: 30px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__figma {
+      @include positioning(absolute);
+      top: 38px;
+      left: 206px;
+      rotate: -33deg;
+
+      width: 46px;
+      height: 46px;
+
+      @media screen and (min-width: $tablet) {
+         width: 56px;
+         height: 56px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         top: 38px;
+         left: 606px;
+
+         width: 66px;
+         height: 66px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__code_tags {
+      @include positioning(absolute);
+      top: 125px;
+      left: 187px;
+      rotate: 33deg;
+
+      width: 43px;
+      height: 23px;
+
+      @media screen and (min-width: $tablet) {
+         left: 287px;
+
+         width: 53px;
+         height: 33px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         top: 125px;
+         left: 387px;
+
+         width: 64px;
+         height: 43px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__photoshop {
+      @include positioning(absolute);
+      top: 173px;
+      left: 57px;
+      rotate: -13deg;
+
+      width: 50px;
+      height: 50px;
+
+      @media screen and (min-width: $tablet) {
+         width: 60px;
+         height: 60px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         left: 197px;
+
+         width: 70px;
+         height: 70px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__adobe-illustrator {
+      @include positioning(absolute);
+      top: 22px;
+      right: 49px;
+      rotate: 13deg;
+
+      width: 35px;
+      height: 35px;
+
+      @media screen and (min-width: $tablet) {
+         top: 42px;
+         right: 209px;
+
+         width: 45px;
+         height: 45px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         top: 162px;
+         right: 269px;
+
+         width: 55px;
+         height: 55px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__html {
+      @include positioning(absolute);
+      top: 144px;
+      right: 57px;
+      rotate: -33deg;
+
+      width: 50px;
+      height: 40px;
+
+      @media screen and (min-width: $tablet) {
+         width: 60px;
+         height: 50px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         top: 244px;
+         right: 57px;
+
+         width: 70px;
+         height: 60px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   // ---- logo and title
+   &__logo {
+      width: 278px;
+      height: 278px;
+      @media screen and (min-width: $tablet) {
+         width: 478px;
+         height: 478px;
+      }
+
+      margin-bottom: 50px;
+   }
+
+   &__title {
+      text-align: center;
+      color: getColor('white-text');
+   }
+
+   &__title-dynamic {
+      color: getColor('secondary-color');
+   }
+
+   // ------- bg-image-bottom --------
+   &__codinghtml {
+      @include positioning(absolute);
+      bottom: 50px;
+      left: 23px;
+      rotate: 23deg;
+
+      width: 45px;
+      height: 45px;
+
+      @media screen and (min-width: $tablet) {
+         width: 55px;
+         height: 55px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         width: 65px;
+         height: 65px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__aftere-ffects {
+      @include positioning(absolute);
+      bottom: 128px;
+      left: 176px;
+      rotate: -33deg;
+
+      width: 46px;
+      height: 46px;
+
+      @media screen and (min-width: $tablet) {
+         bottom: 198px;
+         left: 76px;
+
+         width: 56px;
+         height: 56px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         bottom: 228px;
+         left: 176px;
+
+         width: 66px;
+         height: 66px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__color-palette {
+      @include positioning(absolute);
+      bottom: 45px;
+      right: 177px;
+      rotate: 33deg;
+
+      width: 23px;
+      height: 23px;
+
+      @media screen and (min-width: $tablet) {
+         bottom: 125px;
+         left: 207px;
+
+         width: 33px;
+         height: 33px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         bottom: 105px;
+         left: 277px;
+
+         width: 43px;
+         height: 43px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__css {
+      @include positioning(absolute);
+      bottom: 373px;
+      left: 37px;
+      rotate: -13deg;
+
+      width: 25px;
+      height: 25px;
+
+      @media screen and (min-width: $desktop) {
+         bottom: 373px;
+         left: 57px;
+
+         width: 45px;
+         height: 45px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__visual_studio {
+      @include positioning(absolute);
+      bottom: 112px;
+      right: 49px;
+      rotate: 13deg;
+
+      width: 25px;
+      height: 25px;
+
+      @media screen and (min-width: $tablet) {
+         bottom: 62px;
+         right: 79px;
+
+         width: 45px;
+         height: 45px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         width: 55px;
+         height: 55px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+
+   &__format_color {
+      @include positioning(absolute);
+      bottom: 324px;
+      right: 27px;
+
+      width: 30px;
+      height: 30px;
+
+      @media screen and (min-width: $tablet) {
+         bottom: 294px;
+         right: 17px;
+
+         width: 40px;
+         height: 40px;
+      }
+
+      @media screen and (min-width: $desktop) {
+         bottom: 254px;
+         right: 197px;
+
+         width: 50px;
+         height: 50px;
+
+         transition: transform $timing-function-menu;
+
+         &:hover {
+            transform: scale(0.8);
+         }
+      }
+   }
+}

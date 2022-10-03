@@ -1,0 +1,327 @@
+<section class="result section">
+  <div class="container result__global-box">
+    <h2 class="result__title">Обираєте, що вам необхідно</h2>
+
+    <div class="result__box-positioning">
+      <div class="result__logo">
+        <div class="result__box-logo">
+          <h3 class="result__block-title">1. Розробка лого</h3>
+          <picture>
+            <source
+              srcset="./images/page-index/result/logo-development.webp"
+              type="image/webp"
+            />
+            <img
+              src="./images/page-index/result/logo-development.png"
+              alt="logo-development"
+              class="result__picture img-position"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="result__desing">
+        <div class="result__box-desing">
+          <h3 class="result__block-title">2. Створення дизайну</h3>
+          <picture>
+            <source
+              srcset="./images/page-index/result/design-creation.webp"
+              type="image/webp"
+            />
+            <img
+              src="./images/page-index/result/design-creation.png"
+              alt="design-creation"
+              class="result__picture img-position"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="result__site">
+        <div class="result__box-site">
+          <h3 class="result__block-title">3. Верстка сайту</h3>
+          <picture>
+            <source
+              srcset="./images/page-index/result/website-layout.webp"
+              type="image/webp"
+            />
+            <img
+              src="./images/page-index/result/website-layout.jpg"
+              alt="website-layout"
+              class="result__picture img-position"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div class="result__promotion">
+        <div class="result__box-promotion">
+          <h3 class="result__block-title">4. Просування в Google</h3>
+          <picture>
+            <source
+              srcset="./images/page-index/result/google-promotion.webp"
+              type="image/webp"
+            />
+            <img
+              src="./images/page-index/result/google-promotion.png"
+              alt="google-promotion"
+              class="result__picture img-position"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <div class="result__box-finished">
+      <picture>
+        <source
+          srcset="./images/page-index/result/result-work.webp"
+          type="image/webp"
+        />
+        <img
+          src="./images/page-index/result/result-work.png"
+          alt="result-work"
+          class="result__picture-finished"
+        />
+      </picture>
+      <p class="result__name">Результат</p>
+    </div>
+
+    <!-- Калькулятор  -->
+    <div class="calculator" id="calculator">
+      <h3 class="calculator__title">Калькулятор вартості</h3>
+
+      <ul class="calculator__list">
+        <li class="calculator__item is-oppen" data-form-desing>
+          <button type="button" class="calculator__button" data-button-desing>
+            Дизайн
+          </button>
+
+          <form autocomplete="off" class="calculator__form" data-form="desing">
+            <label id="logo-lable" for="logo" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="logo"
+                id="logo"
+                value="30"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Лого</span>
+            </label>
+
+            <label for="site-design" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="site-design"
+                id="site-design"
+                value="100"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Дизайн сайту</span>
+            </label>
+
+            <label for="social-media-design" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="social-media-design"
+                id="social-media-design"
+                value="50"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Дизайн соцмереж</span>
+            </label>
+
+            <label for="branded-style" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="branded-style"
+                id="branded-style"
+                value="80"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Фірмовий стиль</span>
+            </label>
+          </form>
+        </li>
+
+        <li
+          class="calculator__item calculator__item-position is-oppen"
+          data-form-site
+        >
+          <button type="button" class="calculator__button" data-button-site>
+            Сайт
+          </button>
+
+          <form autocomplete="off" class="calculator__form" data-form="site">
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site"
+                id="site-constructor"
+                value="1"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Сайт на конструкторі</span>
+            </label>
+
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site"
+                id="code-layout"
+                value="2"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Верстка кодом</span>
+            </label>
+
+            <label
+              class="calculator__radio-label calculator__radio-lable--indent"
+            >
+              <input
+                type="radio"
+                name="site"
+                id="no-way-site"
+                value="0"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Ніяк </span>
+            </label>
+
+            <p class="calculator__form-title">Тип сайту</p>
+
+            <!-- <form autocomplete="off" class="calculator__form"> -->
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site-type"
+                id="landing"
+                value="200"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Лендінг</span>
+            </label>
+
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site-type"
+                id="internet-shop"
+                value="450"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Інтернет магазин </span>
+            </label>
+
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site-type"
+                id="website-business-card"
+                value="200"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Сайт візитка</span>
+            </label>
+
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site-type"
+                id="business-website"
+                value="300"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Бізнес сайт</span>
+            </label>
+
+            <label class="calculator__radio-label">
+              <input
+                type="radio"
+                name="site-type"
+                id="no-way-site-type"
+                value="0"
+                class="calculator__radio text-delete"
+              />
+              <span class="calculator__icon-radio"></span>
+              <span class="calculator__name-input">Ніякий </span>
+            </label>
+          </form>
+        </li>
+
+        <li class="calculator__item is-oppen" data-form-promotion>
+          <button
+            type="button"
+            class="calculator__button"
+            data-button-promotion
+          >
+            Просування
+          </button>
+
+          <form autocomplete="off" class="calculator__form" data-form="seo">
+            <label for="seo" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="seo"
+                id="seo"
+                value="200"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">SEO оптимізація </span>
+            </label>
+
+            <label for="google-ads" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="google-ads"
+                id="google-ads"
+                value="150"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Реклама Google</span>
+            </label>
+
+            <label for="copywriting" class="calculator__check-label">
+              <input
+                type="checkbox"
+                name="copywriting"
+                id="copywriting"
+                value="10"
+                class="calculator__checkbox text-delete"
+              />
+              <span class="calculator__icon-check"></span>
+              <span class="calculator__name-input">Копірайтинг</span>
+            </label>
+          </form>
+        </li>
+      </ul>
+    </div>
+
+    <div class="calculator__sum-box">
+      <b class="calculator__sum"
+        >Вартість:
+        <span class="calculator__sum-secondary-text"
+          >від
+          <span class="calculator__value" id="sum">0</span>
+          &#36;</span
+        >
+        <span class=""></span>
+      </b>
+
+      <button class="calculator__consult" type="button">Консультація</button>
+    </div>
+  </div>
+</section>
